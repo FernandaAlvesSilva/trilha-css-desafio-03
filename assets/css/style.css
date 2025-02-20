@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'roboto';
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "header header" "sidebar main";
+}
+
+
+/* Header */
+
+header{
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    grid-area: header;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  
+}
+
+.hedear-logo{
+    margin: 10px 0;
+    padding: 5px; 
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+}
+
+.material-icons{
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.Pesquisar {
+    width: 300px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    outline: none;  
+}
+
+.Buscar{
+    width: 60px;
+    height: 30px;
+    background-color:rgba(248, 248, 248, 1);
+    border: 1px solid #ccc;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 10px;
+    gap: 15px;
+}
+
+.upload, .notifications, .profile {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+
+/* Aside */
+
+.sidebar{
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    grid-area: sidebar;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+
+.sidebar-menu{
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sidebar-menu li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/* Main */
+
+main{
+    grid-area: main;
+}
+
+.videos{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+.thumbnail{
+    position: relative;
+    width: 100%;
+}
+
+.thumbnail img{
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+}
+
+.details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 10px;
+    gap: 10px;
+}
+
+.details img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.info h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info p{
+    font-size: 14px;
+    color: #333;
+}
